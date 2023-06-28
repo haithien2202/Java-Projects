@@ -1,0 +1,23 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>DelegatingWriter\n<size:10>nl.talsmasoftware.umldoclet.rendering.writers" as nl.talsmasoftware.umldoclet.rendering.writers.DelegatingWriter [[DelegatingWriter.html]] {
+        #delegates: List<Writer>
+        +DelegatingWriter(Writer...)
+        +write(char[], int, int): void
+        +flush(): void
+        +close(): void
+    }
+
+    abstract class "<size:14>Writer\n<size:10>java.io" as java.io.Writer [[https://docs.oracle.com/javase/9/docs/api/java/io/Writer.html?is-external=true]] {
+        {abstract} +write(char[], int, int): void
+        {abstract} +flush(): void
+        {abstract} +close(): void
+    }
+
+    java.io.Writer <|-- nl.talsmasoftware.umldoclet.rendering.writers.DelegatingWriter
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

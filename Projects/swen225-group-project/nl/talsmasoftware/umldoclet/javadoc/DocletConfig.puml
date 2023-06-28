@@ -1,0 +1,47 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>DocletConfig\n<size:10>nl.talsmasoftware.umldoclet.javadoc" as nl.talsmasoftware.umldoclet.javadoc.DocletConfig [[DocletConfig.html]] {
+        +init(Locale, Reporter): void
+        +mergeOptionsWith(Set<? extends Option>): Set<Option>
+        +delegateDocletName(): Optional<String>
+        +logger(): Logger
+        +indentation(): Indentation
+        +destinationDirectory(): String
+        +renderPumlFile(): boolean
+        +images(): ImageConfig
+        +fields(): FieldConfig
+        +methods(): MethodConfig
+        +excludedTypeReferences(): List<String>
+        +excludedPackageDependencies(): List<String>
+        +failOnCyclicPackageDependencies(): boolean
+        +resolveExternalLinkToType(String, String): Optional<URI>
+        +customPlantumlDirectives(): List<String>
+        +umlCharset(): Charset
+        +htmlCharset(): Charset
+    }
+
+    interface "<size:14>Configuration\n<size:10>nl.talsmasoftware.umldoclet.configuration" as nl.talsmasoftware.umldoclet.configuration.Configuration [[../configuration/Configuration.html]] {
+        {abstract} +delegateDocletName(): Optional<String>
+        {abstract} +logger(): Logger
+        {abstract} +indentation(): Indentation
+        {abstract} +destinationDirectory(): String
+        {abstract} +renderPumlFile(): boolean
+        {abstract} +images(): ImageConfig
+        {abstract} +fields(): FieldConfig
+        {abstract} +methods(): MethodConfig
+        {abstract} +excludedTypeReferences(): List<String>
+        {abstract} +excludedPackageDependencies(): List<String>
+        {abstract} +failOnCyclicPackageDependencies(): boolean
+        {abstract} +resolveExternalLinkToType(String, String): Optional<URI>
+        {abstract} +customPlantumlDirectives(): List<String>
+        {abstract} +umlCharset(): Charset
+        {abstract} +htmlCharset(): Charset
+    }
+
+    nl.talsmasoftware.umldoclet.configuration.Configuration <|.. nl.talsmasoftware.umldoclet.javadoc.DocletConfig
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

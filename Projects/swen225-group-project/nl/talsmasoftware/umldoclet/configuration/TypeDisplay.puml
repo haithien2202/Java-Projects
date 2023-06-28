@@ -1,0 +1,14 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    enum "<size:14>TypeDisplay\n<size:10>nl.talsmasoftware.umldoclet.configuration" as nl.talsmasoftware.umldoclet.configuration.TypeDisplay [[TypeDisplay.html]] {
+        {static} +NONE
+        {static} +SIMPLE
+        {static} +QUALIFIED
+        {static} +QUALIFIED_GENERICS
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

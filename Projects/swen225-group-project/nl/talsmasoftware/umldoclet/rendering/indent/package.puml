@@ -1,0 +1,73 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.rendering.indent {
+
+        class IndentingPrintWriter [[IndentingPrintWriter.html]] {
+            #IndentingPrintWriter(Appendable, Indentation)
+            {static} +wrap(Appendable, Indentation): IndentingPrintWriter
+            #getDelegate(): IndentingWriter
+            +indent(): IndentingPrintWriter
+            +unindent(): IndentingPrintWriter
+            +whitespace(): IndentingPrintWriter
+            +newline(): IndentingPrintWriter
+            +append(CharSequence): IndentingPrintWriter
+            +append(CharSequence, int, int): IndentingPrintWriter
+            +append(char): IndentingPrintWriter
+        }
+
+        class Indentation [[Indentation.html]] {
+            {static} +tabs(int): Indentation
+            {static} +spaces(int, int): Indentation
+            +increase(): Indentation
+            +decrease(): Indentation
+            +length(): int
+            +charAt(int): char
+            +subSequence(int, int): CharSequence
+        }
+
+        class IndentingWriter [[IndentingWriter.html]] {
+            #IndentingWriter(Appendable, Indentation)
+            {static} +wrap(Appendable, Indentation): IndentingWriter
+            +withIndentation(Indentation): IndentingWriter
+            #getIndentation(): Indentation
+            +indent(): IndentingWriter
+            +unindent(): IndentingWriter
+            +whitespace(): IndentingWriter
+            +write(char[], int, int): void
+            +flush(): void
+            +close(): void
+        }
+
+        java.io.PrintWriter <|-- IndentingPrintWriter
+        java.lang.CharSequence <|.. Indentation
+        java.io.Serializable <|.. Indentation
+        Indentation --> Indentation: DEFAULT\nNONE
+        java.io.Writer <|-- IndentingWriter
+    }
+
+    namespace java.io {
+        class PrintWriter [[https://docs.oracle.com/javase/9/docs/api/java/io/PrintWriter.html?is-external=true]] {
+            #out: Writer
+        }
+        interface Serializable [[https://docs.oracle.com/javase/9/docs/api/java/io/Serializable.html?is-external=true]]
+        abstract class Writer [[https://docs.oracle.com/javase/9/docs/api/java/io/Writer.html?is-external=true]] {
+            #lock: Object
+            {abstract} +write(char[], int, int): void
+            {abstract} +flush(): void
+            {abstract} +close(): void
+        }
+    }
+
+    namespace java.lang {
+        interface CharSequence [[https://docs.oracle.com/javase/9/docs/api/java/lang/CharSequence.html?is-external=true]] {
+            {abstract} +length(): int
+            {abstract} +charAt(int): char
+            +isEmpty(): boolean
+            {abstract} +subSequence(int, int): CharSequence
+            +chars(): IntStream
+            +codePoints(): IntStream
+            {static} +compare(CharSequence, CharSequence): int
+        }
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

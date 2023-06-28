@@ -1,0 +1,31 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.rendering.writers {
+
+        class DelegatingWriter [[DelegatingWriter.html]] {
+            #delegates: List<Writer>
+            +DelegatingWriter(Writer...)
+            +write(char[], int, int): void
+            +flush(): void
+            +close(): void
+        }
+
+        class StringBufferingWriter [[StringBufferingWriter.html]] {
+            +StringBufferingWriter(Writer)
+            +getBuffer(): StringBuffer
+        }
+
+        java.io.Writer <|-- DelegatingWriter
+        DelegatingWriter <|-- StringBufferingWriter
+    }
+
+    namespace java.io {
+        abstract class Writer [[https://docs.oracle.com/javase/9/docs/api/java/io/Writer.html?is-external=true]] {
+            #lock: Object
+            {abstract} +write(char[], int, int): void
+            {abstract} +flush(): void
+            {abstract} +close(): void
+        }
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

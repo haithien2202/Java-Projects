@@ -1,0 +1,18 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>TypeName.Array\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.TypeName.Array [[TypeName.Array.html]] {
+        {static} +of(TypeName): Array
+        #toUml(TypeDisplay, Namespace): String
+    }
+
+    class "<size:14>TypeName\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.TypeName [[TypeName.html]]
+    class "<size:14>TypeName\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.TypeName [[TypeName.html]]
+
+    nl.talsmasoftware.umldoclet.uml.TypeName <|-- nl.talsmasoftware.umldoclet.uml.TypeName.Array
+    nl.talsmasoftware.umldoclet.uml.TypeName +-- nl.talsmasoftware.umldoclet.uml.TypeName.Array
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>PackageDependency\n<size:10>nl.talsmasoftware.umldoclet.javadoc.dependencies" as nl.talsmasoftware.umldoclet.javadoc.dependencies.PackageDependency [[PackageDependency.html]] {
+        +fromPackage: String
+        +toPackage: String
+        +PackageDependency(String, String)
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    enum "<size:14>Type.Classification\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Type.Classification [[Type.Classification.html]] {
+        {static} +ENUM
+        {static} +INTERFACE
+        {static} +ANNOTATION
+        {static} +ABSTRACT_CLASS
+        {static} +CLASS
+        +toUml(): String
+    }
+
+    class "<size:14>Type\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Type [[Type.html]]
+
+    nl.talsmasoftware.umldoclet.uml.Type +-- nl.talsmasoftware.umldoclet.uml.Type.Classification
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

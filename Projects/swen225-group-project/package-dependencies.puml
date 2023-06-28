@@ -1,0 +1,55 @@
+@startuml
+    set namespaceSeparator none
+    hide circle
+    hide empty fields
+    hide empty methods
+
+    nl.talsmasoftware.umldoclet.javadoc.dependencies --> jdk.javadoc.doclet
+    nl.talsmasoftware.umldoclet.javadoc.dependencies --> nl.talsmasoftware.umldoclet.configuration
+    nl.talsmasoftware.umldoclet.javadoc --> jdk.javadoc.doclet
+    nl.talsmasoftware.umldoclet.javadoc --> nl.talsmasoftware.umldoclet.logging
+    nl.talsmasoftware.umldoclet.javadoc --> com.sun.source.util
+    nl.talsmasoftware.umldoclet.javadoc --> nl.talsmasoftware.umldoclet.uml
+    nl.talsmasoftware.umldoclet.javadoc --> nl.talsmasoftware.umldoclet.configuration
+    nl.talsmasoftware.umldoclet.javadoc --> nl.talsmasoftware.umldoclet.rendering.indent
+    nl.talsmasoftware.umldoclet.javadoc --> nl.talsmasoftware.umldoclet.uml.util
+    nl.talsmasoftware.umldoclet.uml --> nl.talsmasoftware.umldoclet.configuration
+    nl.talsmasoftware.umldoclet.uml --> nl.talsmasoftware.umldoclet.rendering.indent
+    nl.talsmasoftware.umldoclet.uml --> net.sourceforge.plantuml
+    nl.talsmasoftware.umldoclet.uml --> nl.talsmasoftware.umldoclet.rendering.writers
+    nl.talsmasoftware.umldoclet.uml.util --> nl.talsmasoftware.umldoclet.uml
+    nl.talsmasoftware.umldoclet.configuration --> nl.talsmasoftware.umldoclet.logging
+    nl.talsmasoftware.umldoclet.configuration --> nl.talsmasoftware.umldoclet.rendering.indent
+    nl.talsmasoftware.umldoclet --> jdk.javadoc.doclet
+    nl.talsmasoftware.umldoclet --> nl.talsmasoftware.umldoclet.javadoc
+    nl.talsmasoftware.umldoclet --> nl.talsmasoftware.umldoclet.uml
+    nl.talsmasoftware.umldoclet.html --> nl.talsmasoftware.umldoclet.configuration
+
+    ' Package links
+    class "nl.talsmasoftware.umldoclet.javadoc.dependencies" [[nl/talsmasoftware/umldoclet/javadoc/dependencies/package-summary.html]] {
+    }
+    class "jdk.javadoc.doclet" [[https://docs.oracle.com/javase/9/docs/api/jdk/javadoc/doclet/package-summary.html?is-external=true]] {
+    }
+    class "nl.talsmasoftware.umldoclet.configuration" [[nl/talsmasoftware/umldoclet/configuration/package-summary.html]] {
+    }
+    class "nl.talsmasoftware.umldoclet.javadoc" [[nl/talsmasoftware/umldoclet/javadoc/package-summary.html]] {
+    }
+    class "nl.talsmasoftware.umldoclet.logging" [[nl/talsmasoftware/umldoclet/logging/package-summary.html]] {
+    }
+    class "com.sun.source.util" [[https://docs.oracle.com/javase/9/docs/api/com/sun/source/util/package-summary.html?is-external=true]] {
+    }
+    class "nl.talsmasoftware.umldoclet.uml" [[nl/talsmasoftware/umldoclet/uml/package-summary.html]] {
+    }
+    class "nl.talsmasoftware.umldoclet.rendering.indent" [[nl/talsmasoftware/umldoclet/rendering/indent/package-summary.html]] {
+    }
+    class "nl.talsmasoftware.umldoclet.uml.util" [[nl/talsmasoftware/umldoclet/uml/util/package-summary.html]] {
+    }
+    class "nl.talsmasoftware.umldoclet.rendering.writers" [[nl/talsmasoftware/umldoclet/rendering/writers/package-summary.html]] {
+    }
+    class "nl.talsmasoftware.umldoclet" [[nl/talsmasoftware/umldoclet/package-summary.html]] {
+    }
+    class "nl.talsmasoftware.umldoclet.html" [[nl/talsmasoftware/umldoclet/html/package-summary.html]] {
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

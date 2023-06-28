@@ -1,0 +1,11 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>JavaBeanProperty\n<size:10>nl.talsmasoftware.umldoclet.uml.util" as nl.talsmasoftware.umldoclet.uml.util.JavaBeanProperty [[JavaBeanProperty.html]] {
+        {static} +detectFrom(Type): Collection<JavaBeanProperty>
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

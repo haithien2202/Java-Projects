@@ -1,0 +1,25 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    interface "<size:14>Configuration\n<size:10>nl.talsmasoftware.umldoclet.configuration" as nl.talsmasoftware.umldoclet.configuration.Configuration [[Configuration.html]] {
+        {abstract} +delegateDocletName(): Optional<String>
+        {abstract} +logger(): Logger
+        {abstract} +indentation(): Indentation
+        {abstract} +destinationDirectory(): String
+        {abstract} +renderPumlFile(): boolean
+        {abstract} +images(): ImageConfig
+        {abstract} +fields(): FieldConfig
+        {abstract} +methods(): MethodConfig
+        {abstract} +excludedTypeReferences(): List<String>
+        {abstract} +excludedPackageDependencies(): List<String>
+        {abstract} +failOnCyclicPackageDependencies(): boolean
+        {abstract} +resolveExternalLinkToType(String, String): Optional<URI>
+        {abstract} +customPlantumlDirectives(): List<String>
+        {abstract} +umlCharset(): Charset
+        {abstract} +htmlCharset(): Charset
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

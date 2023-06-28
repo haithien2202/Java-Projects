@@ -1,0 +1,39 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.logging {
+
+        enum Message [[Message.html]] {
+            {static} +DOCLET_VERSION
+            {static} +DOCLET_COPYRIGHT
+            {static} +DOCLET_UML_FOOTER
+            {static} +PLANTUML_COPYRIGHT
+            {static} +DEBUG_CONFIGURED_IMAGE_FORMATS
+            {static} +DEBUG_SKIPPING_FILE
+            {static} +DEBUG_REPLACING_BY
+            {static} +DEBUG_CANNOT_READ_ELEMENT_LIST
+            {static} +DEBUG_LIVE_PACKAGE_URL_NOT_FOUND
+            {static} +DEBUG_PACKAGE_VISITED_BUT_UNDOCUMENTED
+            {static} +INFO_GENERATING_FILE
+            {static} +INFO_ADD_DIAGRAM_TO_FILE
+            {static} +WARNING_UNRECOGNIZED_IMAGE_FORMAT
+            {static} +WARNING_CANNOT_READ_PACKAGE_LIST
+            {static} +WARNING_UNKNOWN_VISIBILITY
+            {static} +WARNING_PACKAGE_DEPENDENCY_CYCLES
+            {static} +ERROR_UNSUPPORTED_DELEGATE_DOCLET
+            {static} +ERROR_UNANTICIPATED_ERROR_GENERATING_UML
+            {static} +ERROR_UNANTICIPATED_ERROR_GENERATING_DIAGRAMS
+            {static} +ERROR_UNANTICIPATED_ERROR_POSTPROCESSING_HTML
+            +toString(Locale): String
+        }
+
+        interface Logger [[Logger.html]] {
+            {abstract} +localize(Message, Object...): String
+            {abstract} +debug(Object, Object...): void
+            {abstract} +info(Message, Object...): void
+            {abstract} +warn(Message, Object...): void
+            {abstract} +error(Message, Object...): void
+        }
+
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

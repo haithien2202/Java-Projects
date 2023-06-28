@@ -1,0 +1,11 @@
+nl.talsmasoftware.umldoclet
+nl.talsmasoftware.umldoclet.configuration
+nl.talsmasoftware.umldoclet.html
+nl.talsmasoftware.umldoclet.javadoc
+nl.talsmasoftware.umldoclet.javadoc.dependencies
+nl.talsmasoftware.umldoclet.logging
+nl.talsmasoftware.umldoclet.rendering.indent
+nl.talsmasoftware.umldoclet.rendering.writers
+nl.talsmasoftware.umldoclet.uml
+nl.talsmasoftware.umldoclet.uml.util
+nl.talsmasoftware.umldoclet.util

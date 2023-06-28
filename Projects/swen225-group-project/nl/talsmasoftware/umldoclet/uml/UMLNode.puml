@@ -1,0 +1,21 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    abstract class "<size:14>UMLNode\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.UMLNode [[UMLNode.html]] {
+        #UMLNode(UMLNode)
+        +getParent(): UMLNode
+        +setParent(UMLNode): void
+        #findParent(Class<U extends UMLNode>): Optional<U extends UMLNode>
+        +getChildren(): List<UMLNode>
+        +getChildren(Class<T extends UMLNode>): List<T extends UMLNode>
+        +addChild(UMLNode): void
+        +removeChildren(Predicate<? super UMLNode>): void
+        #getConfiguration(): Configuration
+        {abstract} #writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        #writeChildrenTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

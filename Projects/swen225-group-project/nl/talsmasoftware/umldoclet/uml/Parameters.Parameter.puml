@@ -1,0 +1,19 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>Parameters.Parameter\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Parameters.Parameter [[Parameters.Parameter.html]] {
+        +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+    }
+
+    abstract class "<size:14>UMLNode\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.UMLNode [[UMLNode.html]] {
+        {abstract} #writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+    }
+    class "<size:14>Parameters\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Parameters [[Parameters.html]]
+
+    nl.talsmasoftware.umldoclet.uml.UMLNode <|-- nl.talsmasoftware.umldoclet.uml.Parameters.Parameter
+    nl.talsmasoftware.umldoclet.uml.Parameters +-- nl.talsmasoftware.umldoclet.uml.Parameters.Parameter
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

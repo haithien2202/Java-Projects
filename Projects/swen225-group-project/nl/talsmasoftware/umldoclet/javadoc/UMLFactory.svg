@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="116px" preserveAspectRatio="none" style="width:335px;height:116px;background:#FFFFFF;" version="1.1" viewBox="0 0 335 116" width="335px" zoomAndPan="magnify"><defs><filter height="300%" id="flvlcdc27h04t" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[fe117dbae5e2e720fedb284ccfdf3499]
+class nl.talsmasoftware.umldoclet.javadoc.UMLFactory--><a href="UMLFactory.html" target="_top" title="UMLFactory.html" xlink:actuate="onRequest" xlink:href="UMLFactory.html" xlink:show="new" xlink:title="UMLFactory.html" xlink:type="simple"><rect codeLine="5" fill="#FEFECE" filter="url(#flvlcdc27h04t)" height="84.3516" id="nl.talsmasoftware.umldoclet.javadoc.UMLFactory" style="stroke:#A80036;stroke-width:1.5;" width="314" x="7" y="7"/><ellipse cx="71.25" cy="25.9688" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M74.2188,31.6094 Q73.6406,31.9063 73,32.0469 Q72.3594,32.2031 71.6563,32.2031 Q69.1563,32.2031 67.8281,30.5625 Q66.5156,28.9063 66.5156,25.7813 Q66.5156,22.6563 67.8281,21 Q69.1563,19.3438 71.6563,19.3438 Q72.3594,19.3438 73,19.5 Q73.6563,19.6563 74.2188,19.9531 L74.2188,22.6719 Q73.5938,22.0938 73,21.8281 Q72.4063,21.5469 71.7813,21.5469 Q70.4375,21.5469 69.75,22.625 Q69.0625,23.6875 69.0625,25.7813 Q69.0625,27.875 69.75,28.9531 Q70.4375,30.0156 71.7813,30.0156 Q72.4063,30.0156 73,29.75 Q73.5938,29.4688 74.2188,28.8906 L74.2188,31.6094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="140.75" y="24.9951">UMLFactory</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="177" x="91.75" y="37.5791">nl.talsmasoftware.umldoclet.javadoc</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="320" y1="44.9375" y2="44.9375"/><ellipse cx="18" cy="55.9375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="262" x="27" y="59.1479">UMLFactory(Configuration, DocletEnvironment)</text><ellipse cx="18" cy="68.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="253" x="27" y="71.9526">createClassDiagram(TypeElement): Diagram</text><ellipse cx="18" cy="81.5469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="288" x="27" y="84.7573">createPackageDiagram(PackageElement): Diagram</text></a><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="186" x="71" y="107.6338">UMLDoclet 2.0.14, PlantUML 1.2021.9</text><!--MD5=[cc053d572645d47ef6ee2beed703454f]
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>UMLFactory\n<size:10>nl.talsmasoftware.umldoclet.javadoc" as nl.talsmasoftware.umldoclet.javadoc.UMLFactory [[UMLFactory.html]] {
+        +UMLFactory(Configuration, DocletEnvironment)
+        +createClassDiagram(TypeElement): Diagram
+        +createPackageDiagram(PackageElement): Diagram
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml
+
+PlantUML version 1.2021.9(Sun Jul 25 10:13:56 UTC 2021)
+(APACHE source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

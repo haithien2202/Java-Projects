@@ -1,0 +1,22 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>PackageDependencyCycle\n<size:10>nl.talsmasoftware.umldoclet.javadoc.dependencies" as nl.talsmasoftware.umldoclet.javadoc.dependencies.PackageDependencyCycle [[PackageDependencyCycle.html]] {
+        +PackageDependencyCycle(PackageDependency...)
+        {static} +detectCycles(Iterable<PackageDependency>): Set<PackageDependencyCycle>
+        +get(int): PackageDependency
+        +size(): int
+    }
+
+    abstract class "<size:14>AbstractList\n<size:10>java.util" as java.util.AbstractList<PackageDependency> [[https://docs.oracle.com/javase/9/docs/api/java/util/AbstractList.html?is-external=true]] {
+        {abstract} +get(int): PackageDependency
+    }
+    interface "<size:14>RandomAccess\n<size:10>java.util" as java.util.RandomAccess [[https://docs.oracle.com/javase/9/docs/api/java/util/RandomAccess.html?is-external=true]]
+
+    java.util.AbstractList <|-- nl.talsmasoftware.umldoclet.javadoc.dependencies.PackageDependencyCycle
+    java.util.RandomAccess <|.. nl.talsmasoftware.umldoclet.javadoc.dependencies.PackageDependencyCycle
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

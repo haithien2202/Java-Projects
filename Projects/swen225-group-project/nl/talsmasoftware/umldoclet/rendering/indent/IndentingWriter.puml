@@ -1,0 +1,28 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>IndentingWriter\n<size:10>nl.talsmasoftware.umldoclet.rendering.indent" as nl.talsmasoftware.umldoclet.rendering.indent.IndentingWriter [[IndentingWriter.html]] {
+        #IndentingWriter(Appendable, Indentation)
+        {static} +wrap(Appendable, Indentation): IndentingWriter
+        +withIndentation(Indentation): IndentingWriter
+        #getIndentation(): Indentation
+        +indent(): IndentingWriter
+        +unindent(): IndentingWriter
+        +whitespace(): IndentingWriter
+        +write(char[], int, int): void
+        +flush(): void
+        +close(): void
+    }
+
+    abstract class "<size:14>Writer\n<size:10>java.io" as java.io.Writer [[https://docs.oracle.com/javase/9/docs/api/java/io/Writer.html?is-external=true]] {
+        {abstract} +write(char[], int, int): void
+        {abstract} +flush(): void
+        {abstract} +close(): void
+    }
+
+    java.io.Writer <|-- nl.talsmasoftware.umldoclet.rendering.indent.IndentingWriter
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

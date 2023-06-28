@@ -1,0 +1,12 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.html {
+
+        class HtmlPostprocessor [[HtmlPostprocessor.html]] {
+            +HtmlPostprocessor(Configuration)
+            +postProcessHtml(): boolean
+        }
+
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

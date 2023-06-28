@@ -1,0 +1,21 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.util {
+
+        class FileUtils [[FileUtils.html]] {
+            {static} +relativePath(File, File): String
+            {static} +ensureParentDir(File): File
+            {static} +fileNameOf(String): String
+            {static} +withoutExtension(String): String
+            {static} +openReaderTo(String, URI, String): Reader
+            {static} +hasExtension(Object, String): boolean
+        }
+
+        class UriUtils [[UriUtils.html]] {
+            {static} +addPathComponent(URI, String): URI
+            {static} +addHttpParam(URI, String, String): URI
+        }
+
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

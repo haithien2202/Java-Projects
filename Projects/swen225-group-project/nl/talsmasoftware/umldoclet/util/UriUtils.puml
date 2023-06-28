@@ -1,0 +1,12 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>UriUtils\n<size:10>nl.talsmasoftware.umldoclet.util" as nl.talsmasoftware.umldoclet.util.UriUtils [[UriUtils.html]] {
+        {static} +addPathComponent(URI, String): URI
+        {static} +addHttpParam(URI, String, String): URI
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

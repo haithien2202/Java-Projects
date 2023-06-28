@@ -1,0 +1,45 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.javadoc.dependencies {
+
+        class PackageDependencyCycle [[PackageDependencyCycle.html]] {
+            +PackageDependencyCycle(PackageDependency...)
+            {static} +detectCycles(Iterable<PackageDependency>): Set<PackageDependencyCycle>
+            +get(int): PackageDependency
+            +size(): int
+        }
+
+        class DependenciesElementScanner [[DependenciesElementScanner.html]] {
+            +DependenciesElementScanner(DocletEnvironment, Configuration)
+            +visitPackage(PackageElement, String): Set<PackageDependency>
+            +visitType(TypeElement, String): Set<PackageDependency>
+            +visitVariable(VariableElement, String): Set<PackageDependency>
+            +visitExecutable(ExecutableElement, String): Set<PackageDependency>
+            +visitTypeParameter(TypeParameterElement, String): Set<PackageDependency>
+            +visitUnknown(Element, String): Set<PackageDependency>
+        }
+
+        class PackageDependency [[PackageDependency.html]] {
+            +fromPackage: String
+            +toPackage: String
+            +PackageDependency(String, String)
+        }
+
+        java.util.AbstractList <|-- PackageDependencyCycle
+        java.util.RandomAccess <|.. PackageDependencyCycle
+        javax.lang.model.util.ElementScanner9 <|-- DependenciesElementScanner
+    }
+
+    namespace java.util {
+        abstract class AbstractList<E> [[https://docs.oracle.com/javase/9/docs/api/java/util/AbstractList.html?is-external=true]] {
+            #modCount: int
+            {abstract} +get(int): E
+        }
+        interface RandomAccess [[https://docs.oracle.com/javase/9/docs/api/java/util/RandomAccess.html?is-external=true]]
+    }
+
+    namespace javax.lang.model.util {
+        class ElementScanner9<R, P> [[https://docs.oracle.com/javase/9/docs/api/javax/lang/model/util/ElementScanner9.html?is-external=true]]
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

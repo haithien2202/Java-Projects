@@ -1,0 +1,20 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet {
+
+        class UMLDoclet [[UMLDoclet.html]] {
+            +init(Locale, Reporter): void
+            +getName(): String
+            +getSupportedOptions(): Set<Option>
+            +run(DocletEnvironment): boolean
+        }
+
+        jdk.javadoc.doclet.StandardDoclet <|-- UMLDoclet
+    }
+
+    namespace jdk.javadoc.doclet {
+        class StandardDoclet [[https://docs.oracle.com/javase/9/docs/api/jdk/javadoc/doclet/StandardDoclet.html?is-external=true]] {
+        }
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

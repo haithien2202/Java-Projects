@@ -1,0 +1,29 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>Indentation\n<size:10>nl.talsmasoftware.umldoclet.rendering.indent" as nl.talsmasoftware.umldoclet.rendering.indent.Indentation [[Indentation.html]] {
+        {static} +DEFAULT: Indentation
+        {static} +NONE: Indentation
+        {static} +tabs(int): Indentation
+        {static} +spaces(int, int): Indentation
+        +increase(): Indentation
+        +decrease(): Indentation
+        +length(): int
+        +charAt(int): char
+        +subSequence(int, int): CharSequence
+    }
+
+    interface "<size:14>CharSequence\n<size:10>java.lang" as java.lang.CharSequence [[https://docs.oracle.com/javase/9/docs/api/java/lang/CharSequence.html?is-external=true]] {
+        {abstract} +length(): int
+        {abstract} +charAt(int): char
+        {abstract} +subSequence(int, int): CharSequence
+    }
+    interface "<size:14>Serializable\n<size:10>java.io" as java.io.Serializable [[https://docs.oracle.com/javase/9/docs/api/java/io/Serializable.html?is-external=true]]
+
+    java.lang.CharSequence <|.. nl.talsmasoftware.umldoclet.rendering.indent.Indentation
+    java.io.Serializable <|.. nl.talsmasoftware.umldoclet.rendering.indent.Indentation
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

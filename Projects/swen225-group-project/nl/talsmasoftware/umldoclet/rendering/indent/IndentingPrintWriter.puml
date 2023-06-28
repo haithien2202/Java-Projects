@@ -1,0 +1,24 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>IndentingPrintWriter\n<size:10>nl.talsmasoftware.umldoclet.rendering.indent" as nl.talsmasoftware.umldoclet.rendering.indent.IndentingPrintWriter [[IndentingPrintWriter.html]] {
+        #IndentingPrintWriter(Appendable, Indentation)
+        {static} +wrap(Appendable, Indentation): IndentingPrintWriter
+        #getDelegate(): IndentingWriter
+        +indent(): IndentingPrintWriter
+        +unindent(): IndentingPrintWriter
+        +whitespace(): IndentingPrintWriter
+        +newline(): IndentingPrintWriter
+        +append(CharSequence): IndentingPrintWriter
+        +append(CharSequence, int, int): IndentingPrintWriter
+        +append(char): IndentingPrintWriter
+    }
+
+    class "<size:14>PrintWriter\n<size:10>java.io" as java.io.PrintWriter [[https://docs.oracle.com/javase/9/docs/api/java/io/PrintWriter.html?is-external=true]]
+
+    java.io.PrintWriter <|-- nl.talsmasoftware.umldoclet.rendering.indent.IndentingPrintWriter
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>ClassDiagram\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.ClassDiagram [[ClassDiagram.html]] {
+        +ClassDiagram(Configuration, Type)
+        +getType(): Type
+        +addChild(UMLNode): void
+        #writeChildrenTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        #getPlantUmlFile(): File
+    }
+
+    abstract class "<size:14>Diagram\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Diagram [[Diagram.html]] {
+        {abstract} #getPlantUmlFile(): File
+    }
+
+    nl.talsmasoftware.umldoclet.uml.Diagram <|-- nl.talsmasoftware.umldoclet.uml.ClassDiagram
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

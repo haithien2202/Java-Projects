@@ -1,0 +1,13 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>UMLFactory\n<size:10>nl.talsmasoftware.umldoclet.javadoc" as nl.talsmasoftware.umldoclet.javadoc.UMLFactory [[UMLFactory.html]] {
+        +UMLFactory(Configuration, DocletEnvironment)
+        +createClassDiagram(TypeElement): Diagram
+        +createPackageDiagram(PackageElement): Diagram
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

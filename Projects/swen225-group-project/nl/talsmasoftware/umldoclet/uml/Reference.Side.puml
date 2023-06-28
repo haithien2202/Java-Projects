@@ -1,0 +1,16 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>Reference.Side\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Reference.Side [[Reference.Side.html]] {
+        {static} +from(String, String): Side
+        {static} +to(String, String): Side
+    }
+
+    class "<size:14>Reference\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Reference [[Reference.html]]
+
+    nl.talsmasoftware.umldoclet.uml.Reference +-- nl.talsmasoftware.umldoclet.uml.Reference.Side
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

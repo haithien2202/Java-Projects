@@ -1,0 +1,21 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>DependenciesElementScanner\n<size:10>nl.talsmasoftware.umldoclet.javadoc.dependencies" as nl.talsmasoftware.umldoclet.javadoc.dependencies.DependenciesElementScanner [[DependenciesElementScanner.html]] {
+        +DependenciesElementScanner(DocletEnvironment, Configuration)
+        +visitPackage(PackageElement, String): Set<PackageDependency>
+        +visitType(TypeElement, String): Set<PackageDependency>
+        +visitVariable(VariableElement, String): Set<PackageDependency>
+        +visitExecutable(ExecutableElement, String): Set<PackageDependency>
+        +visitTypeParameter(TypeParameterElement, String): Set<PackageDependency>
+        +visitUnknown(Element, String): Set<PackageDependency>
+    }
+
+    class "<size:14>ElementScanner9\n<size:10>javax.lang.model.util" as javax.lang.model.util.ElementScanner9<Set<PackageDependency>, String> [[https://docs.oracle.com/javase/9/docs/api/javax/lang/model/util/ElementScanner9.html?is-external=true]]
+
+    javax.lang.model.util.ElementScanner9 <|-- nl.talsmasoftware.umldoclet.javadoc.dependencies.DependenciesElementScanner
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

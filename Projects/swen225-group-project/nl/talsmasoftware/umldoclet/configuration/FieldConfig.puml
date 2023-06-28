@@ -1,0 +1,12 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    interface "<size:14>FieldConfig\n<size:10>nl.talsmasoftware.umldoclet.configuration" as nl.talsmasoftware.umldoclet.configuration.FieldConfig [[FieldConfig.html]] {
+        {abstract} +typeDisplay(): TypeDisplay
+        {abstract} +include(Visibility): boolean
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

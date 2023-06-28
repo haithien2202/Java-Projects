@@ -1,0 +1,19 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>TypeName.Variable\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.TypeName.Variable [[TypeName.Variable.html]] {
+        {static} +extendsBound(String, TypeName): Variable
+        {static} +superBound(String, TypeName): Variable
+        #toUml(TypeDisplay, Namespace): String
+    }
+
+    class "<size:14>TypeName\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.TypeName [[TypeName.html]]
+    class "<size:14>TypeName\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.TypeName [[TypeName.html]]
+
+    nl.talsmasoftware.umldoclet.uml.TypeName <|-- nl.talsmasoftware.umldoclet.uml.TypeName.Variable
+    nl.talsmasoftware.umldoclet.uml.TypeName +-- nl.talsmasoftware.umldoclet.uml.TypeName.Variable
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

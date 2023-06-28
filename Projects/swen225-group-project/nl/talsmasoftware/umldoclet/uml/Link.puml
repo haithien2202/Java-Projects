@@ -1,0 +1,20 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>Link\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Link [[Link.html]] {
+        {static} +forType(Type): Link
+        {static} +forPackage(Namespace): Link
+        {static} +linkFrom(String): boolean
+        +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+    }
+
+    abstract class "<size:14>UMLNode\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.UMLNode [[UMLNode.html]] {
+        {abstract} #writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+    }
+
+    nl.talsmasoftware.umldoclet.uml.UMLNode <|-- nl.talsmasoftware.umldoclet.uml.Link
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

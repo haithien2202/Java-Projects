@@ -1,0 +1,18 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    interface "<size:14>MethodConfig\n<size:10>nl.talsmasoftware.umldoclet.configuration" as nl.talsmasoftware.umldoclet.configuration.MethodConfig [[MethodConfig.html]] {
+        {abstract} +paramNames(): ParamNames
+        {abstract} +paramTypes(): TypeDisplay
+        {abstract} +returnType(): TypeDisplay
+        {abstract} +include(Visibility): boolean
+        {abstract} +javaBeanPropertiesAsFields(): boolean
+    }
+    enum "<size:14>MethodConfig.ParamNames\n<size:10>nl.talsmasoftware.umldoclet.configuration" as nl.talsmasoftware.umldoclet.configuration.MethodConfig.ParamNames [[MethodConfig.ParamNames.html]]
+
+    nl.talsmasoftware.umldoclet.configuration.MethodConfig +-- nl.talsmasoftware.umldoclet.configuration.MethodConfig.ParamNames
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

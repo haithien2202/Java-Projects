@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="154px" preserveAspectRatio="none" style="width:311px;height:154px;background:#FFFFFF;" version="1.1" viewBox="0 0 311 154" width="311px" zoomAndPan="magnify"><defs><filter height="300%" id="fu2l8gu4hn7oc" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[073a77e421645325936867cc9347cd3a]
+cluster nl.talsmasoftware.umldoclet.html--><polygon fill="#FFFFFF" filter="url(#fu2l8gu4hn7oc)" points="16,6,284,6,291,28.2969,294,28.2969,294,131,16,131,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="291" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="262" x="20" y="20.9951">nl.talsmasoftware.umldoclet.html</text><!--MD5=[c4f766792ad819d0ea95bfd29e7e432c]
+class nl.talsmasoftware.umldoclet.html.HtmlPostprocessor--><a href="HtmlPostprocessor.html" target="_top" title="HtmlPostprocessor.html" xlink:actuate="onRequest" xlink:href="HtmlPostprocessor.html" xlink:show="new" xlink:title="HtmlPostprocessor.html" xlink:type="simple"><rect codeLine="3" fill="#FEFECE" filter="url(#fu2l8gu4hn7oc)" height="73.6094" id="nl.talsmasoftware.umldoclet.html.HtmlPostprocessor" style="stroke:#A80036;stroke-width:1.5;" width="219" x="45.5" y="41"/><ellipse cx="91.25" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M94.2188,62.6406 Q93.6406,62.9375 93,63.0781 Q92.3594,63.2344 91.6563,63.2344 Q89.1563,63.2344 87.8281,61.5938 Q86.5156,59.9375 86.5156,56.8125 Q86.5156,53.6875 87.8281,52.0313 Q89.1563,50.375 91.6563,50.375 Q92.3594,50.375 93,50.5313 Q93.6563,50.6875 94.2188,50.9844 L94.2188,53.7031 Q93.5938,53.125 93,52.8594 Q92.4063,52.5781 91.7813,52.5781 Q90.4375,52.5781 89.75,53.6563 Q89.0625,54.7188 89.0625,56.8125 Q89.0625,58.9063 89.75,59.9844 Q90.4375,61.0469 91.7813,61.0469 Q92.4063,61.0469 93,60.7813 Q93.5938,60.5 94.2188,59.9219 L94.2188,62.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="119" x="111.75" y="61.1543">HtmlPostprocessor</text><line style="stroke:#A80036;stroke-width:1.5;" x1="46.5" x2="263.5" y1="73" y2="73"/><line style="stroke:#A80036;stroke-width:1.5;" x1="46.5" x2="263.5" y1="81" y2="81"/><ellipse cx="56.5" cy="92" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="65.5" y="95.2104">HtmlPostprocessor(Configuration)</text><ellipse cx="56.5" cy="104.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="158" x="65.5" y="108.0151">postProcessHtml(): boolean</text></a><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="186" x="56" y="146.2822">UMLDoclet 2.0.14, PlantUML 1.2021.9</text><!--MD5=[25c553e11bc4dc017c335b70ef380c86]
+@startuml
+    namespace nl.talsmasoftware.umldoclet.html {
+
+        class HtmlPostprocessor [[HtmlPostprocessor.html]] {
+            +HtmlPostprocessor(Configuration)
+            +postProcessHtml(): boolean
+        }
+
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml
+
+PlantUML version 1.2021.9(Sun Jul 25 10:13:56 UTC 2021)
+(APACHE source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

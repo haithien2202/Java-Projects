@@ -1,0 +1,16 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>FileUtils\n<size:10>nl.talsmasoftware.umldoclet.util" as nl.talsmasoftware.umldoclet.util.FileUtils [[FileUtils.html]] {
+        {static} +relativePath(File, File): String
+        {static} +ensureParentDir(File): File
+        {static} +fileNameOf(String): String
+        {static} +withoutExtension(String): String
+        {static} +openReaderTo(String, URI, String): Reader
+        {static} +hasExtension(Object, String): boolean
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

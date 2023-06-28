@@ -1,0 +1,71 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.configuration {
+
+        enum Visibility [[Visibility.html]] {
+            {static} +PRIVATE
+            {static} +PROTECTED
+            {static} +PACKAGE_PRIVATE
+            {static} +PUBLIC
+        }
+
+        interface FieldConfig [[FieldConfig.html]] {
+            {abstract} +typeDisplay(): TypeDisplay
+            {abstract} +include(Visibility): boolean
+        }
+
+        interface ImageConfig [[ImageConfig.html]] {
+            {abstract} +directory(): Optional<String>
+            {abstract} +formats(): Collection<Format>
+        }
+
+        enum nl.talsmasoftware.umldoclet.configuration.ImageConfig.Format [[ImageConfig.Format.html]] {
+            {static} +SVG
+            {static} +PNG
+            {static} +EPS
+        }
+
+        interface MethodConfig [[MethodConfig.html]] {
+            {abstract} +paramNames(): ParamNames
+            {abstract} +paramTypes(): TypeDisplay
+            {abstract} +returnType(): TypeDisplay
+            {abstract} +include(Visibility): boolean
+            {abstract} +javaBeanPropertiesAsFields(): boolean
+        }
+
+        enum nl.talsmasoftware.umldoclet.configuration.MethodConfig.ParamNames [[MethodConfig.ParamNames.html]] {
+            {static} +NONE
+            {static} +BEFORE_TYPE
+            {static} +AFTER_TYPE
+        }
+
+        interface Configuration [[Configuration.html]] {
+            {abstract} +delegateDocletName(): Optional<String>
+            {abstract} +logger(): Logger
+            {abstract} +indentation(): Indentation
+            {abstract} +destinationDirectory(): String
+            {abstract} +renderPumlFile(): boolean
+            {abstract} +images(): ImageConfig
+            {abstract} +fields(): FieldConfig
+            {abstract} +methods(): MethodConfig
+            {abstract} +excludedTypeReferences(): List<String>
+            {abstract} +excludedPackageDependencies(): List<String>
+            {abstract} +failOnCyclicPackageDependencies(): boolean
+            {abstract} +resolveExternalLinkToType(String, String): Optional<URI>
+            {abstract} +customPlantumlDirectives(): List<String>
+            {abstract} +umlCharset(): Charset
+            {abstract} +htmlCharset(): Charset
+        }
+
+        enum TypeDisplay [[TypeDisplay.html]] {
+            {static} +NONE
+            {static} +SIMPLE
+            {static} +QUALIFIED
+            {static} +QUALIFIED_GENERICS
+        }
+
+        ImageConfig +-- nl.talsmasoftware.umldoclet.configuration.ImageConfig.Format
+        MethodConfig +-- nl.talsmasoftware.umldoclet.configuration.MethodConfig.ParamNames
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

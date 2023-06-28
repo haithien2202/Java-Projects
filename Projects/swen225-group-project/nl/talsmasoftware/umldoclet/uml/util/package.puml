@@ -1,0 +1,15 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.uml.util {
+
+        class JavaBeanProperty [[JavaBeanProperty.html]] {
+            {static} +detectFrom(Type): Collection<JavaBeanProperty>
+        }
+
+        class UmlPostProcessors [[UmlPostProcessors.html]] {
+            +javaBeanPropertiesAsFieldsPostProcessor(): Consumer<Type>
+        }
+
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

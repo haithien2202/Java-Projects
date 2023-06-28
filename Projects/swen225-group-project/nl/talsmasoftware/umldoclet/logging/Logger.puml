@@ -1,0 +1,15 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    interface "<size:14>Logger\n<size:10>nl.talsmasoftware.umldoclet.logging" as nl.talsmasoftware.umldoclet.logging.Logger [[Logger.html]] {
+        {abstract} +localize(Message, Object...): String
+        {abstract} +debug(Object, Object...): void
+        {abstract} +info(Message, Object...): void
+        {abstract} +warn(Message, Object...): void
+        {abstract} +error(Message, Object...): void
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

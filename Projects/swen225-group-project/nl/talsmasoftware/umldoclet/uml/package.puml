@@ -1,0 +1,180 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.uml {
+
+        class DependencyDiagram [[DependencyDiagram.html]] {
+            +DependencyDiagram(Configuration, String)
+            +addPackageDependency(String, String): void
+            #getPlantUmlFile(): File
+            #writeChildrenTo(IndentingPrintWriter): IndentingPrintWriter
+        }
+
+        class Method [[Method.html]] {
+            +Method(Type, String, TypeName)
+            +addParameter(String, TypeName): void
+            #writeParametersTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            #writeTypeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        }
+
+        class Namespace [[Namespace.html]] {
+            +name: String
+            +Namespace(UMLNode, String)
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            +contains(TypeName): boolean
+        }
+
+        abstract class UMLNode [[UMLNode.html]] {
+            #UMLNode(UMLNode)
+            #findParent(Class<U extends UMLNode>): Optional<U extends UMLNode>
+            +addChild(UMLNode): void
+            +removeChildren(Predicate<? super UMLNode>): void
+            #getConfiguration(): Configuration
+            {abstract} #writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            #writeChildrenTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        }
+
+        class Reference [[Reference.html]] {
+            +type: String
+            +notes: Collection<String>
+            +Reference(Side, String, Side, String...)
+            +isSelfReference(): boolean
+            +addNote(String): Reference
+            +canonical(): Reference
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            +contains(TypeName): boolean
+        }
+
+        class nl.talsmasoftware.umldoclet.uml.Reference.Side [[Reference.Side.html]] {
+            {static} +from(String, String): Side
+            {static} +to(String, String): Side
+        }
+
+        class PackageDiagram [[PackageDiagram.html]] {
+            +PackageDiagram(Configuration, String)
+            #getPlantUmlFile(): File
+        }
+
+        abstract class Diagram [[Diagram.html]] {
+            #Diagram(Configuration)
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            +getConfiguration(): Configuration
+            {abstract} #getPlantUmlFile(): File
+            +render(): void
+        }
+
+        class Type [[Type.html]] {
+            +Type(Namespace, Classification, TypeName)
+            +updateGenericTypeVariables(TypeName): void
+            +deprecated(): Type
+            +setIncludePackagename(boolean): void
+            +getPackagename(): String
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            +writeChildrenTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        }
+
+        enum nl.talsmasoftware.umldoclet.uml.Type.Classification [[Type.Classification.html]] {
+            {static} +ENUM
+            {static} +INTERFACE
+            {static} +ANNOTATION
+            {static} +ABSTRACT_CLASS
+            {static} +CLASS
+            +toUml(): String
+        }
+
+        abstract class TypeMember [[TypeMember.html]] {
+            +name: String
+            +isAbstract: boolean
+            +isStatic: boolean
+            +isDeprecated: boolean
+            #TypeMember(Type, String, TypeName)
+            +getVisibility(): Visibility
+            +setVisibility(Visibility): void
+            #writeTypeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            #writeParametersTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        }
+
+        class Link [[Link.html]] {
+            {static} +forType(Type): Link
+            {static} +forPackage(Namespace): Link
+            {static} +linkFrom(String): boolean
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        }
+
+        class TypeName [[TypeName.html]] {
+            +simple: String
+            +qualified: String
+            +TypeName(String, String, TypeName...)
+            #toUml(TypeDisplay, Namespace): String
+        }
+
+        class nl.talsmasoftware.umldoclet.uml.TypeName.Array [[TypeName.Array.html]] {
+            {static} +of(TypeName): Array
+            #toUml(TypeDisplay, Namespace): String
+        }
+
+        class nl.talsmasoftware.umldoclet.uml.TypeName.Variable [[TypeName.Variable.html]] {
+            {static} +extendsBound(String, TypeName): Variable
+            {static} +superBound(String, TypeName): Variable
+            #toUml(TypeDisplay, Namespace): String
+        }
+
+        class Field [[Field.html]] {
+            +Field(Type, String, TypeName)
+            #writeTypeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        }
+
+        class Parameters [[Parameters.html]] {
+            +Parameters(UMLNode)
+            +addChild(UMLNode): void
+            +add(String, TypeName): Parameters
+            +varargs(boolean): Parameters
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            +writeChildrenTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        }
+
+        class nl.talsmasoftware.umldoclet.uml.Parameters.Parameter [[Parameters.Parameter.html]] {
+            +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        }
+
+        class ClassDiagram [[ClassDiagram.html]] {
+            +ClassDiagram(Configuration, Type)
+            +addChild(UMLNode): void
+            #writeChildrenTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+            #getPlantUmlFile(): File
+        }
+
+        Diagram <|-- DependencyDiagram
+        DependencyDiagram --> "*" UMLNode: children
+        TypeMember <|-- Method
+        UMLNode <|-- Namespace
+        UMLNode --> UMLNode: parent
+        UMLNode --> "*" UMLNode: children
+        UMLNode <|-- Reference
+        Reference --> nl.talsmasoftware.umldoclet.uml.Reference.Side: from\nto
+        Reference +-- nl.talsmasoftware.umldoclet.uml.Reference.Side
+        Diagram <|-- PackageDiagram
+        UMLNode <|-- Diagram
+        UMLNode <|-- Type
+        Type --> TypeName: name
+        Type --> nl.talsmasoftware.umldoclet.uml.Type.Classification: classfication
+        Type +-- nl.talsmasoftware.umldoclet.uml.Type.Classification
+        UMLNode <|-- TypeMember
+        TypeMember --> TypeName: type
+        UMLNode <|-- Link
+        TypeName --> "*" TypeName: generics
+        TypeName <|-- nl.talsmasoftware.umldoclet.uml.TypeName.Array
+        TypeName +-- nl.talsmasoftware.umldoclet.uml.TypeName.Array
+        TypeName <|-- nl.talsmasoftware.umldoclet.uml.TypeName.Variable
+        TypeName +-- nl.talsmasoftware.umldoclet.uml.TypeName.Variable
+        TypeMember <|-- Field
+        UMLNode <|-- Parameters
+        UMLNode <|-- nl.talsmasoftware.umldoclet.uml.Parameters.Parameter
+        Parameters +-- nl.talsmasoftware.umldoclet.uml.Parameters.Parameter
+        Diagram <|-- ClassDiagram
+        ClassDiagram --> Type: type
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

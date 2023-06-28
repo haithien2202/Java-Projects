@@ -1,0 +1,12 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>HtmlPostprocessor\n<size:10>nl.talsmasoftware.umldoclet.html" as nl.talsmasoftware.umldoclet.html.HtmlPostprocessor [[HtmlPostprocessor.html]] {
+        +HtmlPostprocessor(Configuration)
+        +postProcessHtml(): boolean
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

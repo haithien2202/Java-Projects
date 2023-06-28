@@ -1,0 +1,21 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>DependencyDiagram\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.DependencyDiagram [[DependencyDiagram.html]] {
+        +DependencyDiagram(Configuration, String)
+        +getChildren(): List<UMLNode>
+        +addPackageDependency(String, String): void
+        #getPlantUmlFile(): File
+        #writeChildrenTo(IndentingPrintWriter): IndentingPrintWriter
+    }
+
+    abstract class "<size:14>Diagram\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Diagram [[Diagram.html]] {
+        {abstract} #getPlantUmlFile(): File
+    }
+
+    nl.talsmasoftware.umldoclet.uml.Diagram <|-- nl.talsmasoftware.umldoclet.uml.DependencyDiagram
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

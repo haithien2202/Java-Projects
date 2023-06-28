@@ -1,0 +1,16 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>StringBufferingWriter\n<size:10>nl.talsmasoftware.umldoclet.rendering.writers" as nl.talsmasoftware.umldoclet.rendering.writers.StringBufferingWriter [[StringBufferingWriter.html]] {
+        +StringBufferingWriter(Writer)
+        +getBuffer(): StringBuffer
+    }
+
+    class "<size:14>DelegatingWriter\n<size:10>nl.talsmasoftware.umldoclet.rendering.writers" as nl.talsmasoftware.umldoclet.rendering.writers.DelegatingWriter [[DelegatingWriter.html]]
+
+    nl.talsmasoftware.umldoclet.rendering.writers.DelegatingWriter <|-- nl.talsmasoftware.umldoclet.rendering.writers.StringBufferingWriter
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

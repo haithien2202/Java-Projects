@@ -1,0 +1,54 @@
+@startuml
+    namespace nl.talsmasoftware.umldoclet.javadoc {
+
+        class DocletConfig [[DocletConfig.html]] {
+            +init(Locale, Reporter): void
+            +mergeOptionsWith(Set<? extends Option>): Set<Option>
+            +delegateDocletName(): Optional<String>
+            +logger(): Logger
+            +indentation(): Indentation
+            +destinationDirectory(): String
+            +renderPumlFile(): boolean
+            +images(): ImageConfig
+            +fields(): FieldConfig
+            +methods(): MethodConfig
+            +excludedTypeReferences(): List<String>
+            +excludedPackageDependencies(): List<String>
+            +failOnCyclicPackageDependencies(): boolean
+            +resolveExternalLinkToType(String, String): Optional<URI>
+            +customPlantumlDirectives(): List<String>
+            +umlCharset(): Charset
+            +htmlCharset(): Charset
+        }
+
+        class UMLFactory [[UMLFactory.html]] {
+            +UMLFactory(Configuration, DocletEnvironment)
+            +createClassDiagram(TypeElement): Diagram
+            +createPackageDiagram(PackageElement): Diagram
+        }
+
+        nl.talsmasoftware.umldoclet.configuration.Configuration <|.. DocletConfig
+    }
+
+    namespace nl.talsmasoftware.umldoclet.configuration {
+        interface Configuration [[../configuration/Configuration.html]] {
+            {abstract} +delegateDocletName(): Optional<String>
+            {abstract} +logger(): Logger
+            {abstract} +indentation(): Indentation
+            {abstract} +destinationDirectory(): String
+            {abstract} +renderPumlFile(): boolean
+            {abstract} +images(): ImageConfig
+            {abstract} +fields(): FieldConfig
+            {abstract} +methods(): MethodConfig
+            {abstract} +excludedTypeReferences(): List<String>
+            {abstract} +excludedPackageDependencies(): List<String>
+            {abstract} +failOnCyclicPackageDependencies(): boolean
+            {abstract} +resolveExternalLinkToType(String, String): Optional<URI>
+            {abstract} +customPlantumlDirectives(): List<String>
+            {abstract} +umlCharset(): Charset
+            {abstract} +htmlCharset(): Charset
+        }
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

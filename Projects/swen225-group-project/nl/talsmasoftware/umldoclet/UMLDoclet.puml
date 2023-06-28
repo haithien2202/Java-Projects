@@ -1,0 +1,18 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>UMLDoclet\n<size:10>nl.talsmasoftware.umldoclet" as nl.talsmasoftware.umldoclet.UMLDoclet [[UMLDoclet.html]] {
+        +init(Locale, Reporter): void
+        +getName(): String
+        +getSupportedOptions(): Set<Option>
+        +run(DocletEnvironment): boolean
+    }
+
+    class "<size:14>StandardDoclet\n<size:10>jdk.javadoc.doclet" as jdk.javadoc.doclet.StandardDoclet [[https://docs.oracle.com/javase/9/docs/api/jdk/javadoc/doclet/StandardDoclet.html?is-external=true]]
+
+    jdk.javadoc.doclet.StandardDoclet <|-- nl.talsmasoftware.umldoclet.UMLDoclet
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

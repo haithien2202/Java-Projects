@@ -1,0 +1,27 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    abstract class "<size:14>TypeMember\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.TypeMember [[TypeMember.html]] {
+        +name: String
+        +type: TypeName
+        +isAbstract: boolean
+        +isStatic: boolean
+        +isDeprecated: boolean
+        #TypeMember(Type, String, TypeName)
+        +getVisibility(): Visibility
+        +setVisibility(Visibility): void
+        #writeTypeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        #writeParametersTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+    }
+
+    abstract class "<size:14>UMLNode\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.UMLNode [[UMLNode.html]] {
+        {abstract} #writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+    }
+
+    nl.talsmasoftware.umldoclet.uml.UMLNode <|-- nl.talsmasoftware.umldoclet.uml.TypeMember
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="154px" preserveAspectRatio="none" style="width:287px;height:154px;background:#FFFFFF;" version="1.1" viewBox="0 0 287 154" width="287px" zoomAndPan="magnify"><defs><filter height="300%" id="fmwy7kq85s1p7" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[a9b06750a4d079a8db1c48f82ea740d3]
+class nl.talsmasoftware.umldoclet.util.FileUtils--><a href="FileUtils.html" target="_top" title="FileUtils.html" xlink:actuate="onRequest" xlink:href="FileUtils.html" xlink:show="new" xlink:title="FileUtils.html" xlink:type="simple"><rect codeLine="5" fill="#FEFECE" filter="url(#fmwy7kq85s1p7)" height="122.7656" id="nl.talsmasoftware.umldoclet.util.FileUtils" style="stroke:#A80036;stroke-width:1.5;" width="266" x="7" y="7"/><ellipse cx="58.75" cy="25.9688" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M61.7188,31.6094 Q61.1406,31.9063 60.5,32.0469 Q59.8594,32.2031 59.1563,32.2031 Q56.6563,32.2031 55.3281,30.5625 Q54.0156,28.9063 54.0156,25.7813 Q54.0156,22.6563 55.3281,21 Q56.6563,19.3438 59.1563,19.3438 Q59.8594,19.3438 60.5,19.5 Q61.1563,19.6563 61.7188,19.9531 L61.7188,22.6719 Q61.0938,22.0938 60.5,21.8281 Q59.9063,21.5469 59.2813,21.5469 Q57.9375,21.5469 57.25,22.625 Q56.5625,23.6875 56.5625,25.7813 Q56.5625,27.875 57.25,28.9531 Q57.9375,30.0156 59.2813,30.0156 Q59.9063,30.0156 60.5,29.75 Q61.0938,29.4688 61.7188,28.8906 L61.7188,31.6094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="130.25" y="24.9951">FileUtils</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="154" x="79.25" y="37.5791">nl.talsmasoftware.umldoclet.util</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="272" y1="44.9375" y2="44.9375"/><ellipse cx="18" cy="55.9375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="163" x="27" y="59.1479">relativePath(File, File): String</text><ellipse cx="18" cy="68.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="147" x="27" y="71.9526">ensureParentDir(File): File</text><ellipse cx="18" cy="81.5469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="147" x="27" y="84.7573">fileNameOf(String): String</text><ellipse cx="18" cy="94.3516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="180" x="27" y="97.562">withoutExtension(String): String</text><ellipse cx="18" cy="107.1563" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="240" x="27" y="110.3667">openReaderTo(String, URI, String): Reader</text><ellipse cx="18" cy="119.9609" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="215" x="27" y="123.1714">hasExtension(Object, String): boolean</text></a><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="186" x="47" y="146.0479">UMLDoclet 2.0.14, PlantUML 1.2021.9</text><!--MD5=[38347bdb2210f185feb4c42d153ea3c4]
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>FileUtils\n<size:10>nl.talsmasoftware.umldoclet.util" as nl.talsmasoftware.umldoclet.util.FileUtils [[FileUtils.html]] {
+        {static} +relativePath(File, File): String
+        {static} +ensureParentDir(File): File
+        {static} +fileNameOf(String): String
+        {static} +withoutExtension(String): String
+        {static} +openReaderTo(String, URI, String): Reader
+        {static} +hasExtension(Object, String): boolean
+    }
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml
+
+PlantUML version 1.2021.9(Sun Jul 25 10:13:56 UTC 2021)
+(APACHE source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

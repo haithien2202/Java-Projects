@@ -1,0 +1,19 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    class "<size:14>Method\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.Method [[Method.html]] {
+        +Method(Type, String, TypeName)
+        +addParameter(String, TypeName): void
+        #writeParametersTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        +writeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+        #writeTypeTo(IPW extends IndentingPrintWriter): IPW extends IndentingPrintWriter
+    }
+
+    abstract class "<size:14>TypeMember\n<size:10>nl.talsmasoftware.umldoclet.uml" as nl.talsmasoftware.umldoclet.uml.TypeMember [[TypeMember.html]]
+
+    nl.talsmasoftware.umldoclet.uml.TypeMember <|-- nl.talsmasoftware.umldoclet.uml.Method
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml

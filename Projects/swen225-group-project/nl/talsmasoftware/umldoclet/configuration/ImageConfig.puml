@@ -1,0 +1,15 @@
+@startuml
+    set namespaceSeparator none
+    hide empty fields
+    hide empty methods
+
+    interface "<size:14>ImageConfig\n<size:10>nl.talsmasoftware.umldoclet.configuration" as nl.talsmasoftware.umldoclet.configuration.ImageConfig [[ImageConfig.html]] {
+        {abstract} +directory(): Optional<String>
+        {abstract} +formats(): Collection<Format>
+    }
+    enum "<size:14>ImageConfig.Format\n<size:10>nl.talsmasoftware.umldoclet.configuration" as nl.talsmasoftware.umldoclet.configuration.ImageConfig.Format [[ImageConfig.Format.html]]
+
+    nl.talsmasoftware.umldoclet.configuration.ImageConfig +-- nl.talsmasoftware.umldoclet.configuration.ImageConfig.Format
+
+    center footer UMLDoclet 2.0.14, PlantUML 1.2021.9
+@enduml
