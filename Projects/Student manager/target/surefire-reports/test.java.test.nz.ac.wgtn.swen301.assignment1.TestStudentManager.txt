@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: test.java.test.nz.ac.wgtn.swen301.assignment1.TestStudentManager
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.783 sec

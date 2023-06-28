@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Apr 03 11:18:30 NZST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017f-ec92-af57-00001f309798 
+on database directory memory:C:\Users\haith\Desktop\SWEN301\assignment-1\target\studentdb with class loader org.springframework.boot.loader.LaunchedURLClassLoader@5b275dab 
+Loaded from jar:file:/C:/Users/haith/Desktop/SWEN301/assignment-1/target/studentfinder.jar!/BOOT-INF/lib/derby-10.14.2.0.jar!/
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.13+10-LTS-370
+user.dir=C:\Users\haith\Desktop\SWEN301\assignment-1\target
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

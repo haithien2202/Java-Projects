@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Apr 03 11:00:19 NZST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017f-ec82-0820-00001f384908 
+on database directory memory:C:\Users\haith\Desktop\SWEN301\assignment-1\studentdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44 
+Loaded from file:/C:/Users/haith/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=18+36-2087
+user.dir=C:\Users\haith\Desktop\SWEN301\assignment-1
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
