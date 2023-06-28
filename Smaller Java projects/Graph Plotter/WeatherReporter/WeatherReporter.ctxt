@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=WeatherReporter
+comment0.text=\r\n\ WeatherReporter\r\n\ Analyses\ weather\ data\ from\ files\ of\ weather-station\ measurements.\r\n\r\n\ The\ weather\ data\ files\ consist\ of\ a\ set\ of\ measurements\ from\ weather\ stations\ around\r\n\ New\ Zealand\ at\ a\ series\ of\ date/time\ stamps.\r\n\ For\ each\ date/time,\ the\ file\ has\:\r\n\ \ A\ line\ with\ the\ date\ and\ time\ (four\ integers\ for\ day,\ month,\ year,\ and\ time)\r\n\ \ \ eg\ "24\ 01\ 2021\ 1900"\ \ for\ 24\ Jan\ 2021\ at\ 19\:00\ \r\n\ \ A\ line\ with\ the\ number\ of\ weather-stations\ for\ that\ date/time\ \r\n\ \ Followed\ by\ a\ line\ of\ data\ for\ each\ weather\ station\:\r\n\ \ \ -\ name\:\ one\ token,\ eg\ "Cape-Reinga"\r\n\ \ \ -\ (x,\ y)\ coordinates\ on\ the\ map\:\ two\ numbers,\ eg\ \ \ 186\ 38\r\n\ \ \ -\ four\ numbers\ for\ temperature,\ dew-point,\ suface-pressure,\ and\ sea-level-pressure\r\n\ Some\ of\ the\ data\ files\ (eg\ hot-weather.txt,\ and\ cold-weather.txt)\ have\ data\ for\ just\ one\ date/time.\r\n\ The\ weather-all.txt\ has\ data\ for\ lots\ of\ times.\ The\ date/times\ are\ all\ in\ order.\r\n\ You\ should\ look\ at\ the\ files\ before\ trying\ to\ complete\ the\ methods\ below.\r\n\r\n\ Note,\ the\ data\ files\ were\ extracted\ from\ MetOffice\ weather\ data\ from\ 24-26\ January\ 2021\r\n
+comment1.params=
+comment1.target=void\ plotTemperatures()
+comment1.text=\ \ \ COMPLETION\r\n\ Plots\ the\ temperatures\ for\ one\ date/time\ from\ a\ file\ on\ a\ map\ of\ NZ\r\n\ Asks\ for\ the\ name\ of\ the\ file\ and\ opens\ a\ Scanner\r\n\ It\ is\ good\ design\ to\ call\ plotSnapshot,\ passing\ the\ Scanner\ as\ an\ argument.\r\n
+comment2.params=sc
+comment2.target=void\ plotSnapshot(java.util.Scanner)
+comment2.text=\r\n\ COMPLETION\:\r\n\ \ Plot\ the\ temperatures\ for\ the\ next\ snapshot\ in\ the\ file\ by\ drawing\r\n\ \ \ a\ filled\ coloured\ circle\ (size\ DIAM)\ at\ each\ weather-station\ location.\r\n\ \ The\ colour\ of\ the\ circle\ should\ indicate\ the\ temperature.\r\n\r\n\ \ The\ method\ should\r\n\ \ \ -\ read\ the\ date/time\ and\ draw\ the\ date/time\ at\ the\ top-left\ of\ the\ map.\r\n\ \ \ -\ read\ the\ number\ of\ stations,\ then\r\n\ \ \ -\ for\ each\ station,\r\n\ \ \ \ \ -\ read\ the\ name,\ coordinates,\ and\ data,\ and\r\n\ \ \ \ \ -\ plot\ the\ temperature\ for\ that\ station.\ \r\n\ \ \ (Hint\:\ You\ will\ find\ the\ getTemperatureColor(...)\ method\ useful.)\r\n\r\n\ \ CHALLENGE\:\r\n\ \ Also\ finds\ the\ highest\ and\ lowest\ temperatures\ at\ that\ time,\ and\r\n\ \ plots\ them\ with\ a\ larger\ circle.\r\n\ \ (Hint\:\ If\ more\ than\ one\ station\ has\ the\ highest\ (or\ coolest)\ temperature,\r\n\ \ \ \ \ \ \ \ \ you\ only\ need\ to\ draw\ a\ larger\ circle\ for\ one\ of\ them.\r\n
+comment3.params=
+comment3.target=void\ animateTemperatures()
+comment3.text=\ \ \ CHALLENGE\r\n\ Displays\ an\ animated\ view\ of\ the\ temperatures\ over\ all\r\n\ the\ times\ in\ a\ weather\ data\ files,\ plotting\ the\ temperatures\r\n\ for\ the\ first\ date/time,\ as\ in\ the\ completion,\ pausing\ for\ half\ a\ second,\r\n\ then\ plotting\ the\ temperatures\ for\ the\ second\ date/time,\ and\r\n\ repeating\ until\ all\ the\ data\ in\ the\ file\ has\ been\ shown.\r\n\ \r\n\ (Hint,\ use\ the\ plotSnapshot(...)\ method\ that\ you\ used\ in\ the\ completion)\r\n
+comment4.params=
+comment4.target=void\ reportStation()
+comment4.text=\ \ \ CHALLENGE\r\n\ Prints\ a\ table\ of\ all\ the\ weather\ data\ from\ a\ single\ station,\ one\ line\ for\ each\ day/time.\r\n\ Asks\ for\ the\ name\ of\ the\ station.\r\n\ Prints\ a\ header\ line\r\n\ Then\ for\ each\ line\ of\ data\ for\ that\ station\ in\ the\ weather-all.txt\ file,\ it\ prints\ \r\n\ a\ line\ with\ the\ date/time,\ temperature,\ dew-point,\ surface-pressure,\ and\ \ sealevel-pressure\r\n\ If\ there\ are\ no\ entries\ for\ that\ station,\ it\ will\ print\ a\ message\ saying\ "Station\ not\ found".\r\n\ Hint,\ the\ \\t\ in\ a\ String\ is\ the\ tab\ character,\ which\ helps\ to\ make\ the\ table\ line\ up.\r\n
+comment5.params=sc\ name
+comment5.target=void\ printText(java.util.Scanner,\ java.lang.String)
+comment6.params=temp
+comment6.target=java.awt.Color\ getTemperatureColor(double)
+comment6.text=\ Returns\ a\ color\ representing\ that\ temperature\r\n\ \ The\ colors\ are\ increasingly\ blue\ below\ 15\ degrees,\ and\r\n\ \ increasingly\ red\ above\ 15\ degrees.\r\n
+comment7.params=
+comment7.target=void\ setupGUI()
+comment8.params=arguments
+comment8.target=void\ main(java.lang.String[])
+numComments=9

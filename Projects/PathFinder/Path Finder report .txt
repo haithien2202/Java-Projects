@@ -1,0 +1,54 @@
+Hai Thien Tran
+Pathfinder report
+My code need traffic-light.tab file.
+My code able find and print out the route. It can find the route base on shortest distance or shortest time.
+My code able to find the articulation point of all nodes in the disconnected graph or only find articulation points in
+a part of the graph by select a random node in that part of the graph.
+My code able to look for restrictions selected and ignore the restricted routes.
+My code also look at if it is a traffic light, avoid that intersection.
+
+Pseudocode of articulation point algorithms:
+Search ( root )	{
+		set root depth = 0
+		root set check = true
+		subtree of root = 0
+	for ( Node rootNeighbors : root.getNeighbors){
+		if ( rootNeighbors depth is not MAX VALUE ){
+			do iteration ( rootNeighbors(child), 1 (depth), root (parentNode))
+		}
+		subtree += 1
+	}
+	if subtree > 1 do add root into APList
+	return APList
+}
+Iteration ( Node node , int depth, Node parent){
+	(Create fringe and add first node into fringe)
+	Stack<Tuple> fringe = new Stack<>();
+	fringe.push(new Tuple(node, count, root
+	while (fringe is not empty){
+		this node = peek fringe
+		if ( this node depth is not set) {
+			this node set count = (this node count)
+			this node set reachBack = this node count
+			put children into this node tuple
+		}
+		else if (this node children is not empty){
+			Node child = get first child in the array of children
+			if ( child count is not MAX VALUE ) set reachback (min(child count, this node get reachBack))
+			else push to fringe ( new tuple ( child , depth +1 , parent)) 
+		}else {
+			if ( this node is not root ){
+				this parent node set reach back (min(this node get reach back, parent get reach back))
+				if(this node reach back >=  parent node reachback) add this node into APList
+			}
+		remove this node from fringe
+		}
+	}
+}
+
+Tuple class ( node, depth, parent) {
+	this node = node
+	this parent = parent
+	this depth = depth
+}
+		

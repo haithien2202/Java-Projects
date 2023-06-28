@@ -1,0 +1,6 @@
+My code able to do DFT, IDFT, FFT and IFFT. It doesn't have any bug. However, DFT and IDFT take a while to finish running.
+It takes about 10 minutes to finish DFT/IDFT on the small wave file.
+FFT/IFFT takes about 2 seconds to finsih running on the small file.
+The result is not the same as FFT/IFFT require to trim the wavelenght and DFT/IDFT doesn't. However, if we trim the wavelength of DFT/IDFT, both methods should give the same result.
+If we want the result to be accurate, we have to use DFT. But FFT/IFFT is way faster therefore in many cases, we can ignore the inaccuracy in the result as it is too small compared to the time DFT/IDFT taken to finish processing the
+time/frequency domain.

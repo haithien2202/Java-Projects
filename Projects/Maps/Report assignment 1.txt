@@ -1,0 +1,13 @@
+Thien Tran
+Report Assignment 1:
+- My code able to draw graph of the bus network using nodes (stops) and edges (connections between 2 stops).
+- Able to use buttons on the panel as well as using arrow keys and mouse wheel to zoom in and out, move the graph around.
+- Able return the map to the center of the drawing area using returning center button.
+- Albe to use quadtree to quickly find the closest stop to the location of the mouse when click on the drawing area.
+- Allows user to choose hiding or displaying quadtree boxes.
+- When displaying the quadtree boxes, it highlight the scanned quadtree nodes.
+- Able to search for exact stop name by typing in the search box and press Enter key or click on the Search button.
+- It will able to recommend the stop names in the dropdown section using prefix which it gets from the search box.
+- It able highlight the stop and its trips either by clicking on the drawing area, searching for exact name of the stop or selecting an item in the dropdown section.
+
+My code uses map, list, graph, trie and quadtree.

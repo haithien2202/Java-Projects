@@ -1,0 +1,22 @@
+!SESSION 2022-05-23 20:28:10.114 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=17.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_NZ
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+This is a continuation of log file C:\Users\haith\OneDrive\Documents\THIEN\SWEN 221\SWEN221\Assignment 4\.metadata\.bak_0.log
+Created Time: 2022-05-23 20:29:27.730
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 20:29:27.730
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.GrMTenAt
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 20:29:27.731
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 20:29:27.731
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GrMTenAt => OK
+
+!ENTRY org.eclipse.ui 2 2 2022-05-23 20:29:28.134
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)

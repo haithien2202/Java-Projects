@@ -1,0 +1,11 @@
+Question: has whiskers
+Question: bigger than person
+Question: has bờm
+Answer: Lion
+Answer: Tiger
+Answer: Cat
+Question: has legs
+Question: has trunk
+Answer: Elephant
+Answer: Rhino
+Answer: Snake

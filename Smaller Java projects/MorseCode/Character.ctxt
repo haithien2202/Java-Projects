@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Character
+comment0.text=\n\ A\ Binary\ Tree\ is\ a\ data\ structure\ in\ which\ each\ node\ has\ at\ most\ two\n\ children.\n\ Each\ node\ has\ a\ field\ to\ hold\ the\ text\ representing\ the\ character,\ if\ known,\n\ or\ null\ otherwise.\n\ The\ combination\ of\ dashes\ and\ dots\ leading\ to\ this\ character\ represents\ its\n\ morse\ code.\n\ The\ two\ possible\ nodes\ are\ dash\ and\ dot.\n
+comment1.params=txt
+comment1.target=Character(java.lang.String)
+comment1.text=\n\ Construct\ a\ new\ node\ with\ some\ text.\n
+comment2.params=txt\ dashChild\ dotChild
+comment2.target=Character(java.lang.String,\ Character,\ Character)
+comment2.text=\n\ Construct\ a\ new\ node\ with\ text\ and\ two\ children\n
+comment3.params=
+comment3.target=java.lang.String\ getText()
+comment3.text=Getters
+comment4.params=
+comment4.target=Character\ getDash()
+comment5.params=
+comment5.target=Character\ getDot()
+comment6.params=t
+comment6.target=void\ setText(java.lang.String)
+comment6.text=Setters
+comment7.params=dashChild
+comment7.target=void\ setDash(Character)
+comment8.params=dotChild
+comment8.target=void\ setDot(Character)
+comment9.params=x\ y
+comment9.target=void\ draw(double,\ double)
+comment9.text=\n\ Draw\ the\ node\ (as\ a\ box\ with\ the\ text)\ on\ the\ graphics\ pane\n\ (x,y)\ is\ the\ center\ of\ the\ box\n\ The\ box\ should\ be\ WIDTH\ wide,\ and\ HEIGHT\ high.\n
+numComments=10

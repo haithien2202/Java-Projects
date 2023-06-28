@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ImageInfo
+comment0.text=\ ImageInfo\ represents\ the\ information\ of\ an\ Image.\r\n
+comment1.params=n\ desc
+comment1.target=ImageInfo(java.lang.String,\ java.lang.String)
+comment1.text=\ Construct\ a\ new\ ImageInfo\ object.\r\n\ \ Parameters\ are\ the\ name\ of\ the\ image\ and\ its\ description\r\n\ \ Stores\ the\ parameters\ into\ fields\ \r\n
+comment2.params=left\ top\ width\ height
+comment2.target=void\ displaySmall(double,\ double,\ double,\ double)
+comment2.text=\r\n\ Display\ the\ image\ (no\ text)\ at\ the\ specified\ coordinates\r\n
+comment3.params=size
+comment3.target=void\ displayLarge(double)
+comment3.text=\r\n\ Display\ the\ image\ and\ the\ text,\ large\ size.\r\n\ Position\ given\ by\ the\ constants\ defined\ above\r\n
+numComments=4

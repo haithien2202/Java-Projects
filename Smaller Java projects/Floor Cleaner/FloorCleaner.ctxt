@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=FloorCleaner
+comment0.text=\ Runs\ a\ simulation\ of\ a\ robot\ vacuum\ cleaner\ that\ moves\ around\ a\ floor\ area,\r\n\ \ \ \ \ \ changing\ to\ a\ new\ random\ direction\ every\ time\ it\ hits\ the\ edge\ of\ the\r\n\ \ \ \ \ \ floor\ area.\r\n
+comment1.params=
+comment1.target=void\ cleanFloor()
+comment1.text=\ Simulation\ loop.\r\n\ The\ method\ should\ draw\ a\ dirty\ floor\ (a\ gray\ rectangle),\ and\ then\r\n\ create\ one\ robot\ (core)\ or\ two\ robots\ (completion)\ and\ make\ them\ run\ around\ for\ ever.\r\n\ Each\ time\ step,\ each\ robot\ will\ erase\ the\ "dirt"\ under\ it,\ and\ then\r\n\ \ move\ forward\ a\ small\ amount.\r\n\ After\ it\ has\ moved,\ the\ program\ should\ ask\ for\ the\ robot's\r\n\ \ position\ and\ check\ the\ position\ against\ the\ edges\ of\ the\ floor\ area.\r\n\ If\ it\ has\ gone\ over\ the\ edge,\ it\ will\ make\ the\ robot\ step\ back\ onto\ the\ floor\r\n\ \ and\ change\ its\ direction.\r\n\ For\ the\ completion,\ it\ will\ also\ check\ if\ the\ robots\ have\ hit\ each\ other,\ and\r\n\ \ if\ so,\ make\ them\ both\ back\ off\ and\ change\ direction\r\n\ \r\n\ Hint\:\ A\ robot\ should\ start\ in\ a\ "safe"\ initial\ position\ (not\ over\ the\ edge)\:\r\n\ \ its\ x\ position\ should\ be\ between\ \ LEFT+DIAM/2\ and\ RIGHT-DIAM/2\r\n\ \ its\ y\ position\ should\ be\ between\ \ TOP+DIAM/2\ and\ BOT-DIAM/2\r\n\ Hint\:\ For\ the\ completion,\ you\ have\ to\ make\ sure\ that\ starting\ positions\ of\r\n\ \ the\ robots\ are\ not\ on\ top\ of\ each\ other\ (otherwise\ they\ get\ "stuck"\ to\ each\ other\!)\r\n
+comment2.params=
+comment2.target=void\ cleanFloor2()
+comment3.params=
+comment3.target=void\ cleanFloor3()
+comment4.params=
+comment4.target=void\ setupGUI()
+comment4.text=Make\ buttons\ to\ let\ the\ user\ run\ the\ methods
+comment5.params=arguments
+comment5.target=void\ main(java.lang.String[])
+numComments=6
